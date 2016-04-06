@@ -62,3 +62,4 @@ EXPORTS
        bd_tell
        bd_tell_time
        bd_user_input
+       bdj_jvm_available	   
