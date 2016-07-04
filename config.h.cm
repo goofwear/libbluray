@@ -21,7 +21,7 @@
 #cmakedefine HAVE_PTHREAD_H
 
 /* Define this if you have FreeType2 library */
-#define HAVE_FT2
+#cmakedefine HAVE_FT2
 
 /* Define this if you have fontconfig library */
 #cmakedefine HAVE_FONTCONFIG
@@ -48,7 +48,7 @@
 #define PACKAGE_NAME "libbluray"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libbluray 0.9.1"
+#define PACKAGE_STRING "libbluray 0.9.3"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libbluray"
@@ -57,7 +57,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.9.1"
+#define PACKAGE_VERSION "0.9.3"
 
 /* Version number of package */
-#define VERSION "0.9.1"
+#define VERSION "0.9.3"
