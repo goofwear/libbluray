@@ -228,6 +228,14 @@ install(FILES
   ${PROJECT_SOURCE_DIR}/util/log_control.h
   DESTINATION include/libbluray)
 
+install(FILES
+  $<TARGET_PDB_FILE:libbluray>
+  DESTINATION lib)
+
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/libbluray-j2se-0.9.3.jar
+  DESTINATION bin)
+
 install(EXPORT libbluray
   FILE
     libbluray.cmake
