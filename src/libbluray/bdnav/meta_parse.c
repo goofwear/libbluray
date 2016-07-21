@@ -36,6 +36,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <headers_fixup.h>
 
 #ifdef HAVE_STRINGS_H
 #include <strings.h>

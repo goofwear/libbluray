@@ -1,10 +1,11 @@
-project(libbluray LANGUAGES C)
+cmake_minimum_required(VERSION 3.0)
+cmake_policy(SET CMP0048 NEW)
+project(libbluray VERSION 0.9.3 LANGUAGES C)
 
-cmake_minimum_required(VERSION 2.8)
 
 find_package(freetype 2.6 REQUIRED NO_MODULE)
+find_package(libxml2 2.9 REQUIRED NO_MODULE)
 
-set(libbluray_VERSION 0.9.3)
 
 set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
@@ -173,6 +174,7 @@ SET_TARGET_PROPERTIES(libbluray PROPERTIES LINK_FLAGS "/DEF:\"libbluray.def\"")
 
 endif()
 
+target_link_libraries(libbluray PRIVATE libxml2::libxml2)
 target_compile_definitions(libbluray
   PRIVATE
   HAVE_CONFIG_H
@@ -203,6 +205,7 @@ else()
 endif()
 
 set(HAVE_FT2 1)
+set(HAVE_LIBXML2 1)
 CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/config.h.cm ${CMAKE_CURRENT_BINARY_DIR}/config.h)
 
 include(CMakePackageConfigHelpers)
